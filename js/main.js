@@ -1,5 +1,4 @@
-function handleData() {}
-
+// load data from json file
 function loadData() {
   $.ajax({
     type: "GET",
@@ -10,6 +9,7 @@ function loadData() {
 
       var data = template(data);
       $("#load-data").html(data);
+      // DataTable
       $("table").DataTable();
     },
   });
