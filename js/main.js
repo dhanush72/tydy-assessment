@@ -10,7 +10,12 @@ function loadData() {
       var data = template(data);
       $("#load-data").html(data);
       // DataTable
-      $("table").DataTable();
+      $("table").DataTable({
+        "lengthMenu": [
+          [10, 25, 50, 500, -1],
+          [10, 25, 50, 500, "All"],
+        ],
+      });
     },
   });
 }
