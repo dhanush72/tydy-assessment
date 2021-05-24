@@ -1,0 +1,77 @@
+$bgColor: #f9fbff;
+$textColor: #4f546c;
+$white: #ffffff;
+$shadowColor: #e1e5ee;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  height: 100vh;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  color: $textColor;
+  font-size: 0.9rem;
+  background-color: $bgColor;
+}
+
+.wrapper {
+  h1 {
+    text-align: center;
+    margin: 2rem 0;
+  }
+}
+
+.dataTables_filter,
+.dataTables_length,
+.dataTables_info,
+.dataTables_paginate {
+  margin: 1rem 0;
+}
+
+.dataTables_filter {
+  input[type="search"] {
+    position: relative;
+    padding: 15px 20px;
+    width: 300px;
+    border: none;
+    border-radius: 5px;
+    background: $white;
+    border: 1px solid $shadowColor;
+    outline: none;
+  }
+}
+
+table {
+  border-collapse: collapse;
+  box-shadow: 0 5px 10px $shadowColor;
+  background-color: $white;
+  text-align: left;
+  overflow: hidden;
+
+  &.dataTable tbody tr td {
+    padding: 1rem;
+  }
+
+  thead {
+    box-shadow: 0 5px 10px $shadowColor;
+  }
+
+  th {
+    padding: 1rem 2rem;
+
+    font-size: 0.9rem;
+    font-weight: 800;
+  }
+
+  &.dataTable tbody tr:nth-child(odd) {
+    background-color: $shadowColor;
+  }
+}

@@ -4,10 +4,13 @@ function loadData() {
     type: "GET",
     url: "data.json",
     success: function (data) {
+      // retrieve template from html doc
       var source = $("#users-data").html();
       var template = Handlebars.compile(source);
 
       var data = template(data);
+
+      // insert data into html
       $("#load-data").html(data);
       // DataTable
       $("table").DataTable({
